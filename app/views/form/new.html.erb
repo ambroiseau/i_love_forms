@@ -3,8 +3,8 @@
 <h1>Hello les champions !!</h1>
 <p>Venez on va remplir des formulaire yepaaaaaaaaa c la folie par ici</p>
 
-
-<%= bootstrap_form_for @user, url: {action: "create"} do |f| %>
+<!-- en local c'était joli...Il faudrait rajouter la gem bootstrap_form et mettre devant form_for le mot bootstrap_ pour que ce ne soit pas vilain... mais ça marche pas en production dslll-->
+<%= form_for @user, url: {action: "create"} do |f| %>
   	<%= f.text_field :username %><br>
   	<%= f.text_field :email %><br>
   	<%= f.text_area :bio %><br>

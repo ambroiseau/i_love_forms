@@ -4,13 +4,11 @@ class FormController < ApplicationController
   end
 
   def create
-    @user = User.new 
-    puts "Hello de puis le serveur"
+    @user = User.new
     @user.username = params["user"][:username]
     @user.email = params["user"][:email]
     @user.bio = params["user"][:bio]    
     puts @user.username
-    puts "c'est fini"
     @user.save
   end
 end
